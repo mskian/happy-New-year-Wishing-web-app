@@ -1,9 +1,11 @@
 # Happy New year Wishing Web App
 
+Happy New year Name Wishing Wish Web APP :100:
+
 - Bootstrap CSS (Frontend Framework)
 - PHP/MYSQL
 
-## Customization
+## Customization :electric_plug:
 
 Create Database Table for Store the user's Entries.
 
