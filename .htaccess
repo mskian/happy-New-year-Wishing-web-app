@@ -1,0 +1,38 @@
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9_-]+)$ wish.php?str=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/$ wish.php?str=$1
+
+Options +FollowSymlinks
+
+# Rule #4a - Block out any script trying to base64_encode crap to send via URL
+RewriteCond %{QUERY_STRING} base64_encode.*(.*) [OR]
+
+# Rule #4b - Block out any script that includes a <script> tag in URL
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+
+# Rule #4c - Block out any script trying to set a PHP GLOBALS variable via URL
+RewriteCond %{QUERY_STRING} GLOBALS(=|[|%[0-9A-Z]{0,2}) [OR]
+
+# Rule #4d - Block out any script trying to modify a _REQUEST variable via URL
+RewriteCond %{QUERY_STRING} _REQUEST(=|[|%[0-9A-Z]{0,2})
+
+# Rule #4e - Send all blocked request to homepage with 403 Forbidden error!
+RewriteRule ^(.*)$ index.php [F,L] 
+
+# Prevent SQL injections
+RewriteEngine On
+RewriteCond %{QUERY_STRING} UNION([%20\ /\*+]*)ALL([%20\ /\*+]*)SELECT [NC,OR]
+RewriteCond %{QUERY_STRING} UNION([%20\ /\*+]*)SELECT [NC,OR]
+RewriteCond %{QUERY_STRING} /\* [NC,OR]
+RewriteCond %{QUERY_STRING} \*/ [NC]
+RewriteRule ^.* - [F]
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+RewriteCond %{QUERY_STRING} http:.*\/.*\/ [OR]
+RewriteCond %{QUERY_STRING} ..*\/ [OR]
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteCond %{QUERY_STRING} [^a-z](declare|char|set|cast|convert|delete|drop|exec|insert|meta|script|select|truncate|update)[^a-z] [NC]
+RewriteRule (.*) - [F] 
+
+Options -Indexes
