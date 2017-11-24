@@ -9,6 +9,8 @@ Happy New year Name Wishing Web APP :100:
 
 Watch demo in youtube - <a href="https://youtu.be/WoVyj0X2-EA" target="_blank">Demo</a>
 
+Forum Discussion - <a href="https://goo.gl/Mkebuv" target="_blank">Join Now</a>
+
 ## Customization :electric_plug:
 
 Create Database Table for Store the user's Entries.
