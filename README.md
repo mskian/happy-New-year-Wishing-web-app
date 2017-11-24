@@ -1,6 +1,6 @@
 # Happy New year Wishing Web App
 
-Happy New year Name Wishing Wish Web APP :100:
+Happy New year Name Wishing Web APP :100:
 
 - Bootstrap CSS (Frontend Framework)
 - PHP/MYSQL
