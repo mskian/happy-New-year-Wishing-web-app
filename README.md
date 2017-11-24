@@ -8,6 +8,7 @@
 Create Database Table for Store the user's Entries.
 
 ```
+
 CREATE TABLE event_wishes
 (
  id INT NOT NULL AUTO_INCREMENT,
@@ -15,6 +16,7 @@ CREATE TABLE event_wishes
  str VARCHAR (500) NOT NULL UNIQUE,
  PRIMARY KEY (ID)
 );
+
 
 ```
 
@@ -25,6 +27,7 @@ CREATE TABLE event_wishes
 - Replace `http://localhost/newyear` it with your web app Home page URL
 
 ```
+
 header("Location: http://localhost/newyear/$str");
 
 ```
@@ -34,6 +37,7 @@ header("Location: http://localhost/newyear/$str");
 - Replace `http://localhost/newyear` it with your web app Home page URL
 
 ```
+
 <form method="post" action="http://localhost/newyear" class="form-inline">
 
 ```
