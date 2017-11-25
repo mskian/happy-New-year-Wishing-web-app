@@ -67,7 +67,6 @@ exit();
 <meta property="og:description" content="Happy new year greetings 2018: wish your loved ones a pleasant Happy New Year wishes in 2018 with our attractive greeting and a Specially designed Web page." /> 
 <meta property="og:site_name" content="Happy New year" />
 <meta property="fb:app_id" content="YOUR FB APP ID" />
-<meta property="article:publisher" content="YOUR FB PAGE URL" />
 
 <!-- Google+ Meta Tags. -->
 <meta itemprop="name" content="Happy New year 2018 - Expressing wishes Heart full on New Year">
