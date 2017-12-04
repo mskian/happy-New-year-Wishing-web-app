@@ -17,11 +17,11 @@ Forum Discussion - <a href="https://goo.gl/Mkebuv" target="_blank">Join Now</a>
 
 ## Recent Changes
 
-:bug: W3 validation Errors
-:bug: Fix Whatsapp W3 validation Errors & Warnings - Enode the Share Text Usig PHP rawurlencode
-:art: Twitter Meta Tag Improvements
-:art: Add Ad Placements Slots
-:art: Update Google Font Lato to Ubuntu
+:bug: W3 validation Errors <br>
+:bug: Fix Whatsapp W3 validation Errors & Warnings - Enode the Share Text Usig PHP rawurlencode <br>
+:art: Twitter Meta Tag Improvements <br>
+:art: Add Ad Placements Slots <br>
+:art: Update Google Font Lato to Ubuntu <br>
 
 
 ## Customization :electric_plug:
