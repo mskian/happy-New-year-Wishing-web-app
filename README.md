@@ -15,6 +15,15 @@ Watch demo in youtube - <a href="https://youtu.be/WoVyj0X2-EA" target="_blank">D
 
 Forum Discussion - <a href="https://goo.gl/Mkebuv" target="_blank">Join Now</a>
 
+## Recent Changes
+
+:bug: W3 validation Errors
+:bug: Fix Whatsapp W3 validation Errors & Warnings - Enode the Share Text Usig PHP rawurlencode
+:art: Twitter Meta Tag Improvements
+:art: Add Ad Placements Slots
+:art: Update Google Font Lato to Ubuntu
+
+
 ## Customization :electric_plug:
 
 Create Database Table for Store the user's Entries.
