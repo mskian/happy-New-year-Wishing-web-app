@@ -19,7 +19,7 @@ Blog Post - <a href="https://awts.in/2nBIPZh" target="_blank">Read Now</a>
 
 ## Recent Changes
 
-:bug: W3 validation Errors <br>
+:bug: Fix W3 validation Errors <br>
 :bug: Fix Whatsapp W3 validation Errors & Warnings - Enode the Share Text Using PHP rawurlencode <br>
 :art: Twitter Meta Tag Improvements <br>
 :art: Add Ad Placements Slots <br>
