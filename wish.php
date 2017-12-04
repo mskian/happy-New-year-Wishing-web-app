@@ -29,12 +29,13 @@ else
 <html lang="en" itemscope itemtype="http://schema.org/WebSite">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
 <meta name="theme-color" content="#9b59b6">
 <meta name="robots" content="index,follow" />
 <?php $current_page = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
- echo '<link rel="canonical" href="'.$current_page.'" itemprop="url"/>'; ?>
+ echo '<link rel="canonical" href="'.$current_page.'" />'; ?>
 
 
 
@@ -48,7 +49,9 @@ else
 <meta name="twitter:title" content="<?php echo $user_wish['title']; ?> Wishing you a Happy New year 2018" />
 <meta name="twitter:description" content="<?php echo $user_wish['title']; ?> Wishing you a Happy New Year - Here is your Happy New Year 2018 Greeting Wishes." />
 <meta name="twitter:image" content="TWITTER OG THUMBNAIL URL" />
-<meta name="twitter:creator" content="@username">
+<meta name="twitter:url" content="<?php echo $current_page; ?>" />
+<meta name="twitter:site" content="@username"/>
+<meta name="twitter:creator" content="@username"/>
 
 <!-- Facebook Open Graph data -->
 <meta property="og:title" content="<?php echo $user_wish['title']; ?> Wishing you a Happy New year 2018" />
@@ -69,26 +72,15 @@ else
 
 <link rel="stylesheet" type="text/css" href="build/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="build/css/animate.css" />
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu' type='text/css' media='all' />
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<style type="text/css">
-
+<style>
 body {
     background-image: url("build/image/bg.gif");
-    font-family: 'Lato', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;  
-    font-size: 18px
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px
 }
-/* Author image */
-.userimg {
-    border:5px solid #d2d2d2;
-    padding:2px;
-    }
-    .img-circle {
-        border-radius: 50%;
-    }
     .panel-default > .panel-heading-custom {
         background: #8e44ad; color: #fff;
     }
@@ -102,7 +94,7 @@ body {
         margin-top: 1.5em;
     }
     .footer-text {
-        font-size: .8em;
+        font-size: 14px;
         text-align: center;
         font-weight: 400;
     }
@@ -208,14 +200,15 @@ background-color: #b3e5fc;}
 
 </head>
 <body>
-<!-- Greeting Card Start -->
+<br />
+
+<!-- Ads -->
 <div class="container">
 <div class="row">
-<div class="col-lg-8 col-lg-offset-2">
-<br />
-<section class="text-center">
-<div class="veer home-logo"><span class="post-author">Happy New Year Wishes 2018</span></div>
-</section>
+<div class="col-lg-6 col-lg-offset-3 text-center">
+
+<!-- Your Google Adsense Code -->
+
 </div>
 </div>
 </div>
@@ -238,14 +231,15 @@ background-color: #b3e5fc;}
 <p class="post-title text-center">Lets celebrate this blissful,<br/>
 cheerful, colorful New year. with a smile.<br/>
 <b>Wish you Happy new year.</b></p>
-<h3 class="text-center"><b><i class="fa fa-star" aria-hidden="true"></i> <?php echo $user_wish['title']; ?> <i class="fa fa-star" aria-hidden="true"></i></b></h3><br/>
+<h3 class="animated infinite pulse text-center"><b><i class="fa fa-star" aria-hidden="true"></i> <?php echo $user_wish['title']; ?> <i class="fa fa-star" aria-hidden="true"></i></b></h3><br/>
 </div>
 </div>
 
+<!-- Social Share -->
 <div class="text-center" >
 <div class="sharebuttons btn-group btn-group-lg">
-<a class="btn btn-whatsapp" href="whatsapp://send?text=Click this blue line and see the Magic 🎁 👉 <?php echo 'https://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"]; ?>" target="_blank"><i class="fa fa-whatsapp"></i> <span>Share</span></a>
-<a class="btn btn-facebook" href="https://facebook.com/sharer.php?u=<?php echo 'https://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"]; ?>" target="_blank"><i class="fa fa-facebook"></i> <span>Share</span></a>
+<a class="btn btn-whatsapp" href="whatsapp://send?text=<?php echo rawurlencode($user_wish['title']); ?>%20💯%20Sending%20you%20a%20Happy%20New%20Year%20Greetings%20🎁%20👉%20<?php echo $current_page; ?>" target="_blank"><i class="fa fa-whatsapp"></i> <span>Share</span></a>
+<a class="btn btn-facebook" href="https://facebook.com/sharer.php?u=<?php echo $current_page; ?>" target="_blank"><i class="fa fa-facebook"></i> <span>Share</span></a>
 </div>
 </div>
 
@@ -265,7 +259,7 @@ cheerful, colorful New year. with a smile.<br/>
 <h2 class="phead section-heading">Create your Own New year Greeting</h2>
 </div>
 <div class="panel-body">
-<form method="post" action="http://localhost/newyear" class="form-inline">
+<form method="post" action="http://localhost/newyear/" class="form-inline">
 <p class="para">Enter your name to wish your friends and Family memebers. <b>"Happy New Year"</b></p>
 <div class="form-group">
 <input type="text" class="form-control" id="title" onkeydown="validateAlpha();" name="title" maxlength="25" placeholder="Enter Your Name" required>
@@ -277,6 +271,19 @@ cheerful, colorful New year. with a smile.<br/>
 </div>
 </div>
 </div>
+<br />
+
+<!-- Ads -->
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-lg-offset-3 text-center">
+
+<!-- Your Google Adsense Code -->
+
+</div>
+</div>
+</div>
+<br />
 
 <!-- Message Box -->
 <div class="container">
@@ -297,10 +304,10 @@ cheerful, colorful New year. with a smile.<br/>
 <p class="lnf footer-text">Copyright &copy; 2018 Happy New year Wishes.</p>
 </footer>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="build/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="build/js/bootstrap.min.js"></script>
 
-<script type="text/javascript">
+<script>
 
     function validateAlpha(){
     $('#error-display').hide();

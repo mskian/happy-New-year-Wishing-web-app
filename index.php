@@ -28,22 +28,24 @@ $str=to_prety_url($title);
 $sql_query = "INSERT INTO event_wishes (title,str) VALUES ('$title','$str')";
 $result_set=mysqli_query($con,$sql_query);
 
-// Replace http://localhost/$str with your Greeting WEB APP URL
+// Replace http://localhost/newyear/$str with your Greeting WEB APP URL
 header("Location: http://localhost/newyear/$str");
 exit();
 }
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebSite">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True" />
 <meta name="theme-color" content="#9b59b6">
 <meta name="robots" content="index,follow" />
 <?php $current_page = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
- echo '<link rel="canonical" href="'.$current_page.'" itemprop="url"/>'; ?>
+ echo '<link rel="canonical" href="'.$current_page.'" />'; ?>
 
 
 <!-- Seo Meta Tags -->
@@ -56,7 +58,8 @@ exit();
 <meta name="twitter:title" content="Happy New year 2018 - Expressing wishes Heart full on New Year" />
 <meta name="twitter:description" content="Happy new year greetings 2018: wish your loved ones a pleasant Happy New Year wishes in 2018 with our attractive greeting and a Specially designed Web page." />
 <meta name="twitter:image" content="TWITTER OG THUMBNAIL URL" />
-<meta name="twitter:creator" content="@username" />
+<meta name="twitter:url" content="<?php echo $current_page; ?>" />
+<meta name="twitter:site" content="@username" />
 
 <!-- Facebook Open Graph data -->
 <meta property="og:title" content="Happy New year 2018 - Expressing wishes Heart full on New Year" />
@@ -67,6 +70,7 @@ exit();
 <meta property="og:description" content="Happy new year greetings 2018: wish your loved ones a pleasant Happy New Year wishes in 2018 with our attractive greeting and a Specially designed Web page." /> 
 <meta property="og:site_name" content="Happy New year" />
 <meta property="fb:app_id" content="YOUR FB APP ID" />
+<meta property="article:publisher" content="YOUR FB PAGE URL" />
 
 <!-- Google+ Meta Tags. -->
 <meta itemprop="name" content="Happy New year 2018 - Expressing wishes Heart full on New Year">
@@ -75,25 +79,15 @@ exit();
 
 <link rel="stylesheet" type="text/css" href="build/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="build/css/animate.css" />
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu' type='text/css' media='all' />
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<style type="text/css">
+<style>
 body {
     background-image: url("build/image/bg.gif");
-    font-family: 'Lato', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;  
-    font-size: 18px
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px
 }
-/* Author image */
-.userimg {
-    border:5px solid #d2d2d2;
-    padding:2px;
-    }
-    .img-circle {
-        border-radius: 50%;
-    }
     .panel-default > .panel-heading-custom {
         background: #8e44ad; color: #fff;
     }
@@ -101,13 +95,14 @@ body {
         font-size: 14px;
     }
     .phead {
-        font-size: 16px;
+        font-size: 18px;
+        font-weight: 600;
     }
     .footer {
         margin-top: 1.5em;
     }
     .footer-text {
-        font-size: .8em;
+        font-size: 14px;
         text-align: center;
         font-weight: 400;
     }
@@ -164,15 +159,6 @@ body {
         background-color: rgb(255, 255, 153);
         border-radius:20px 20px 0 20px;
         } 
-/* SHAREBUTTONS */
-.sharebuttons a { color: #fff !important; }
-.sharebuttons span {
-    font-size: 16px;
-}
-.btn-whatsapp { background: #128c7e;}
-.btn-facebook { background: #3b5998;}
-.btn-whatsapp:hover { background: #075e54;}
-.btn-facebook:hover { background: #2f4679;}
 .panel-default > .panel-heading-custom {
  background: #8e44ad; color: #fff;
 }
@@ -214,13 +200,14 @@ background-color: #b3e5fc;}
 </head>
 <body>
 <br />
-<!-- Greeting Card Start -->
+
+<!-- Ads -->
 <div class="container">
 <div class="row">
-<div class="col-lg-8 col-lg-offset-2">
-<section class="text-center">
-<div class="veer home-logo"><span class="post-author">Happy New Year Wishes 2018</span></div>
-</section>
+<div class="col-lg-6 col-lg-offset-3 text-center">
+
+<!-- Your Google Adsense Code -->
+
 </div>
 </div>
 </div>
@@ -238,6 +225,7 @@ background-color: #b3e5fc;}
 <div class="text-center">
 <p class="animated infinite tada" ><img src="build/image/happynewyear2018-web1.png" width="300" alt="Happy New Year"></p>
 </div>
+<br />
 <p class="post-title text-center">Happy New Year Wishes - Send Happy New Year Greeting Wishes to your Friends &amp; Family Members.</p><br/>
 <p class="post-title text-center">Happy New year Greetings - wish your loved ones a pleasant Happy New Year wishes in 2018 with our attractive greeting and a Specially Designed Web page.</p>
 </div>
@@ -248,6 +236,7 @@ background-color: #b3e5fc;}
 </section>
 <br />
 
+<!-- Greeting Form -->
 <div class="container">
 <div class="row">
 <div class="col-lg-6 col-lg-offset-3 text-center">
@@ -270,14 +259,26 @@ background-color: #b3e5fc;}
 </div>
 <br />
 
+<!-- Ads -->
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-lg-offset-3 text-center">
+
+<!-- Your Google Adsense Code -->
+
+</div>
+</div>
+</div>
+<br />
+
 <footer class="home-footer text-center">
 <p class="lnf footer-text">Copyright &copy; 2018 Happy New year Wishes.</p>
 </footer>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="build/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="build/js/bootstrap.min.js"></script>
 
-<script type="text/javascript">
+<script>
 
     function validateAlpha(){
     $('#error-display').hide();

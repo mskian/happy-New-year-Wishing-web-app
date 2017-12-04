@@ -42,11 +42,11 @@ header("Location: http://localhost/newyear/$str");
 
 - open `wish.php`
 - Find this Below line on `wish.php`
-- Replace `http://localhost/newyear` it with your web app Home page URL
+- Replace `http://localhost/newyear/` it with your web app Home page URL Don't remove "/" 
 
 ```
 
-<form method="post" action="http://localhost/newyear" class="form-inline">
+<form method="post" action="http://localhost/newyear/" class="form-inline">
 
 ```
 
