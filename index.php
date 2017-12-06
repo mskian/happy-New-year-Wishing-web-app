@@ -112,23 +112,6 @@ body {
         letter-spacing: 0;
         color: #2c3643;
     }
-    /* Keep images centered, and allow images wider than the main
-   text column to break out. */
-.post-content img {
-    display: block;
-    max-width: 126%;
-    height: auto;
-    padding: 0.6em 0;
-    /* Centers an image by (1) pushing its left edge to the
-       center of its container and (2) shifting the entire image
-       in the opposite direction by half its own width.
-       Works for images that are larger than their containers. */
-    position: relative;
-    left: 50%;
-    -webkit-transform: translateX(-50%); /* for Safari and iOS */
-    -ms-transform: translateX(-50%); /* for IE9 */
-    transform: translateX(-50%);
-}
 .post-content img {
     max-height: 100%;
     max-width: 100%;
@@ -223,8 +206,10 @@ background-color: #b3e5fc;}
 </div>
 <div class="panel-body veer-panel">
 <div class="text-center">
-<p class="animated infinite tada" ><img src="build/image/happynewyear2018-web1.png" width="300" alt="Happy New Year"></p>
+<br />
+<img class="animated infinite tada" src="build/image/happynewyear2018-web1.png" width="300" alt="Happy New Year">
 </div>
+<br />
 <br />
 <p class="post-title text-center">Happy New Year Wishes - Send Happy New Year Greeting Wishes to your Friends &amp; Family Members.</p><br/>
 <p class="post-title text-center">Happy New year Greetings - wish your loved ones a pleasant Happy New Year wishes in 2018 with our attractive greeting and a Specially Designed Web page.</p>
