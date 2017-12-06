@@ -24,6 +24,7 @@ Blog Post - <a href="https://awts.in/2nBIPZh" target="_blank">Read Now</a>
 :art: Twitter Meta Tag Improvements <br>
 :art: Add Ad Placements Slots <br>
 :art: Update Google Font Lato to Ubuntu <br>
+:art: Add Responsive Image `<div class="post-content"><img src="build/image/example.png" alt="alt text"></div>`
 
 
 ## Customization :electric_plug:
