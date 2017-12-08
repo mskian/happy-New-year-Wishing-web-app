@@ -26,7 +26,7 @@ Blog Post - <a href="https://awts.in/2nBIPZh" target="_blank">Read Now</a>
 :art: Update Google Font Lato to Ubuntu <br>
 :art: Add Responsive Image `<div class="post-content"><img src="build/image/example.png" alt="alt text"></div>`
 
-## Recent Changes
+## Features
 
 - SEO Friendly URL
 - Social Meta Tags
