@@ -78,9 +78,9 @@ exit();
 <meta itemprop="image" content="OG THUMBNAIL URL">
 
 <link rel="stylesheet" type="text/css" href="build/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="build/css/animate.css" />
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu' type='text/css' media='all' />
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu" type="text/css" media="all"/>
+<link type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <style>
 body {
@@ -260,7 +260,8 @@ background-color: #b3e5fc;}
 <p class="lnf footer-text">Copyright &copy; 2018 Happy New year Wishes.</p>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="build/js/bootstrap.min.js"></script>
 
 <script>
