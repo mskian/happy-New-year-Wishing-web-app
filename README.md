@@ -7,7 +7,7 @@
 Happy New Year Name Wishing Web APP :100:
 
 - Bootstrap CSS (Frontend Framework)
-- PHP/MYSQL [PHP Version - version 5.6 or greater(PHP 7 Recommended)/ MYSQL Version -  5.5 or greater]
+- PHP/MYSQL [PHP Version - version 5.6 or greater(PHP 7 Recommended) / MYSQL Version -  5.5 or greater / MariaDB version 10.0 or greater]
 
 ## Demo
 
